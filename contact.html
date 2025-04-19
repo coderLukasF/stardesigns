@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+  <script src="picture-onclick.js"></script>
+  <script src="mobile-menu.js"></script>
+  <link rel="stylesheet" href="nav-bar.css">
+  <link rel="icon" type="image/x-icon" href="images/StarDesigns_icon.png">
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+    @font-face {
+        font-family: futuralight;
+        src: url(fonts/futuralight.ttf);
+    }
+
+    body {
+      margin: 0;
+
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100vh;
+      padding-top: 80px;
+      overflow: hidden;
+    }
+
+    .form-div {
+      width: 50%;
+      height: 94.6vh;
+      padding: 20px;
+      opacity: 0;
+      margin-top: 0;
+
+      background-image: url("images/space-background.jpg");
+      background-size: cover;
+      background-position: center;
+
+      animation-name: start;
+      animation-duration: 1s;
+      animation-delay: 1.2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+        
+      --base-margin: 0px;
+      --extra-margin: 10vh
+    }
+
+    .logo-div {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slogan {
+      font-family: futuralight, sans-serif, Arial;
+      color: white;
+      margin: auto;
+
+      margin-top: 0;
+      text-align: center;
+
+      animation-name: start;
+      animation-duration: 1s;
+      animation-delay: 1.2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+        
+      --base-margin: 0px;
+      --extra-margin: 67px
+    }
+
+    .name {
+      text-align: center;
+      display: block;
+      margin: auto;
+      background: none;
+      color: white;
+      width: 45%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      margin-top: 15px;
+
+      border: solid;
+      border-color: rgb(255, 255, 255);
+      border-radius: 5px;
+    }
+
+    .email {
+      text-align: center;
+      display: block;
+      margin: auto;
+      background: none;
+      color: white;
+      width: 45%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      margin-top: 30px;
+
+      border: solid;
+      border-color: rgb(255, 255, 255);
+      border-radius: 5px;
+    }
+
+    .subject {
+      text-align: center;
+      display: block;
+      margin: auto;
+      background: none;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      margin-top: 30px;
+
+      border: solid;
+      border-color: rgb(255, 255, 255);
+      border-radius: 5px;
+    }
+
+    .message {
+      resize: none;
+      text-align: center;
+      display: block;
+      margin: auto;
+      background: none;
+      color: white;
+      width: 50%;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      height: 150px;
+
+      margin-top: 30px;
+
+      border: solid;
+      border-color: rgb(255, 255, 255);
+      border-radius: 5px;
+    }
+
+    .button-div {
+      display: flex;
+      justify-content: center;
+    }
+
+    .send-button {
+      font-family: futuralight, sans-serif, Arial;
+      font-weight: bold;
+
+      width: 300px;
+      height: 50px;
+
+      font-size: 20px;
+      margin-top: 30px;
+
+      background-color: rgb(0, 166, 255);
+      border: solid;
+      border-radius: 7px;
+      cursor: pointer;
+
+      transition: background-color 0.15s;
+    }
+
+    .send-button:hover {
+      background-color: rgb(0, 112, 172);
+    }
+
+    .send-button:active {
+      background-color: rgb(126, 170, 255);
+    }
+
+    .about-me {
+      width: 50%;
+      height: 94.6vh;
+      background-color: grey;
+      text-align: center;
+      opacity: 0;
+      margin-top: 0;
+
+      animation-name: start;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+        
+      --base-margin: 0px;
+      --extra-margin: 10vh;
+    }
+
+    .about-me h1{
+      font-family: Tangerine, sans-serif, Arial;
+
+      font-size: 50px;
+      font-weight: bolder;
+      margin-top: 15px;
+    }
+
+    .about-me p{
+      font-family: futuralight, sans-serif, Arial;
+      margin-top: 10px;
+      width: 90%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .contacts {
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .github {
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      transition: color 0.15s;
+    }
+
+    .linkedin {
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      margin-left: 10px;
+      transition: color 0.15s;
+    }
+
+    .github:hover {
+      color: white;
+    }
+
+    .linkedin:hover {
+      color: #0274b3;
+    }
+
+    @keyframes start {
+      0% {
+        opacity: 0;
+        margin-top: calc(var(--base-margin) + var(--extra-margin));
+      }
+
+      100% {
+        opacity: 1;
+        margin-top: 0;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <a href="contact.html"><button class="nav-button">Contact</button></a>
+      </ul>
+    </nav>
+
+  <div class="mobile-nav">
+    <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+    <ul class="mobile-links">
+      <img src="images/stardesignslogo.png" class="nav-logo">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+  <div class="container">
+
+    <div class="about-me">
+      <h1>Hey, im Lukas</h1>
+      <p>
+        Have you found an error, or a problem? Please report it here. If you want to get in touch, please contact me here.
+      </p>
+      <div class="contacts">
+        <div class="github-div">
+          <a class="github" href="https://www.github.com/coderLukasF" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="linkedin-div">
+          <a class="linkedin" href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-div">
+      <div class="front-page">
+        <div class="logo-div">
+          <img src="images/stardesignslogo.png" class="logo">
+        </div>
+        <p class="slogan">
+          “Every website needs a star like ours.”
+        </p>
+      </div>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="form" id="contact-form">
+        <input type="hidden" name="access_key" value="920a8c87-db03-4749-a703-3e9db74885be">
+
+        <input type="text" name="name" placeholder="Name*" class="name" required>
+        <input type="email" name="email" placeholder="Email*" class="email" required>
+        <textarea name="message" placeholder="Your Message*" class="message" required></textarea>
+
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <div class="button-div">
+          <button type="submit" class="send-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+
+</html>
