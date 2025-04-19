@@ -1,3 +1,3 @@
 function pictureonclick() {
-  window.location.href='stardesignsstudio.com/';
+  window.location.href='https://www.stardesignsstudio.com/';
 }
