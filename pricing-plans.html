@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stardesigns - Pricing</title>
+
+    <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="picture-onclick.js"></script>
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="icon" type="image/x-icon" href="images/StarDesigns_icon.png">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+        @font-face {
+            font-family: futuralight;
+            src: url(fonts/futuralight.ttf);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppings', sans-serif;
+        }
+
+        body {
+            background-image: url("images/space-background.jpg");
+            background-repeat: repeat-y;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            padding-top: 50px;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container h2{
+            font-family: futuralight, sans-serif, Arial;
+            color: #fff;
+            font-size: 42px;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .price-row {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 25px;
+        }
+
+        .price-col {
+            background: linear-gradient(0deg, hsla(186, 85%, 19%, 1) 0%, hsla(217, 37%, 22%, 1) 100%);
+            padding: 10% 15%;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            height: 600px;
+            border: solid;
+            border-color: black;
+            opacity: 0;
+            margin: auto;
+
+            animation-name: start;            
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        
+            --base-margin: 0px;
+            --extra-margin: 70px;
+        }
+
+        .price-col-pro {
+            background: linear-gradient(0deg, hsla(186, 85%, 19%, 1) 0%, hsla(217, 37%, 22%, 1) 100%);
+            padding: 10% 15%;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            border: solid;
+            border-color: rgb(255, 255, 0);
+            margin-top: 0;
+            opacity: 0;
+            margin: auto;
+            padding-bottom: 110px;
+
+            animation-name: start;
+            animation-duration: 1s;
+            animation-delay: 1.2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        
+            --base-margin: 0px;
+            --extra-margin: 67px
+        }
+
+
+        .price-col p{
+            font-family: Tangerine, sans-serif, Arial;
+            font-size: 50px;
+        }
+
+        .price-col a {
+            color: rgb(126, 208, 255);
+            text-decoration: none;
+        }
+
+        .price-col a:hover {
+            text-decoration: underline;
+        }
+
+        .price-col button{
+            font-family: Arial;
+            margin-top: 5vh;
+
+            width: 150px;
+            height: 45px;
+            font-size: 20px;
+
+            background-color: rgb(0, 166, 255);
+            border: solid;
+            border-radius: 7px;
+            cursor: pointer;
+
+            transition: background-color 0.15s;
+        }
+
+        .price-col button:hover {
+            background-color: rgb(0, 112, 172);
+        }
+
+        .price-col button:active {
+            margin-top: 5.1vh;
+            background-color: rgb(126, 170, 255);
+        }
+
+        .price-col-pro p{
+            font-family: Tangerine, sans-serif, Arial;
+            font-size: 50px;
+            margin-top: 0;
+        }
+
+        .price-col-pro button{
+            font-family: Arial;
+            margin-top: 40px;
+
+            width: 150px;
+            height: 45px;
+            font-size: 20px;
+            color: white;
+
+            background-image: url("images/space-background.jpg");
+            border: solid;
+            border-color: rgb(255, 255, 0);
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .price-col-pro h4 {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            bottom: 56px;
+            background-color: rgb(255, 255, 0);
+            color: black;
+
+            border: none;
+            border-radius: 5px;
+
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+
+        @keyframes start {
+        0% {
+            opacity: 0;
+            margin-top: calc(var(--base-margin) + var(--extra-margin));
+        }
+
+        100% {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+    }
+
+    @media (max-width: 888px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .price-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .price-col, .price-col-pro {
+        width: 80%;
+        margin: 0;
+    }
+    }
+
+    </style>
+    
+   
+</head>
+<body>
+
+    <header>
+        <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
+        <nav>
+          <ul class="nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing-plans.html">Pricing</a></li>
+            <a href="contact.html"><button class="nav-button">Contact</button></a>
+          </ul>
+        </nav>
+  
+      <div class="mobile-nav">
+        <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+        <ul class="mobile-links">
+          <img src="images/stardesignslogo.png" class="nav-logo">
+          <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing-plans.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+
+<div class="container">
+    <h2>Choose your plan</h2>
+
+    <div class="price-row">
+        <div class="price-col">
+            <p>Basic</p>
+            <h3>$50</h3>
+            <ul>
+                <li>Home page, Contact page, About page</li>
+                <li>Responsive Design (Mobile-friendly)</li>
+                <li>LinkedIn Page</li>
+                <li>Basic Header</li>
+                <li>Credits to stardesigns, more in the <a href="https://docs.google.com/document/d/1fsYXnuS97wIbrwwzbVIi4SDuUvidJTnXb4RrLe0axS0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">google document</a></li>
+            </ul>
+            <a href="request.html">
+                <button>Buy</button>
+            </a>
+        </div>
+        
+
+        <div class="price-col-pro">
+            <h4>Best Selling</h4>
+            <p>Pro</p>
+            <h3>$100</h3>
+            <ul>
+                <li>Home page, Contact page, About page, Gallery/Product page, Blog Page</li>
+                <li>Include socials (Instagram, LinkedIn, Facebook, or any other social media)</li>
+                <li>Mobile Support</li>
+                <li>Customer Support</li>
+                <li>Support payment systems, such as <a href="https://www.stripe.com">Stripe</a></li>
+                <li>Custom Animations</li>
+                <li>No credits, unlike the basic plan</li>
+            </ul>
+            <a href="request.html">
+                <button>Buy</button>
+            </a>
+        </div>
+
+        <div class="price-col">
+            <p>Elite</p>
+            <h3>$200</h3>
+            <ul>
+                <li>All of pro</li>
+                <li>Blog or news page</li>
+                <li>FAQ Page</li>
+                <li>Videos</li>
+                <li>Graphic Design Animations</li>
+                <li>Review Page</li>
+            </ul>
+            <a href="request.html">
+                <button>Buy</button>
+            </a>
+        </div>
+    </div>
+</div> 
+</body>
+</html>

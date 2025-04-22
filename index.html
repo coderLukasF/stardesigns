@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stardesigns - Home</title>
+
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+  <script src="mobile-menu.js"></script>
+  <script src="picture-onclick.js"></script>
+  <link rel="stylesheet" href="nav-bar.css">
+  <link rel="icon" type="image/x-icon" href="images/StarDesigns_icon.png">
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+    @font-face {
+      font-family: futuralight;
+      src: url(fonts/futuralight.ttf);
+    }
+
+    body {
+      margin: 0;
+      
+      /* background-image: url("istockphoto-169945157-1024x1024.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; */
+    }
+    
+
+    .front-page {
+      opacity: 0;
+      width: 100%;
+      background-color: rgb(54, 54, 54);
+      padding-top: 50px;
+      margin-bottom: 0;
+
+      align-items: center;
+      justify-content: center;
+
+      animation-name: start;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+  
+      --base-margin: 0px;
+      --extra-margin: 30px;
+    }
+
+    
+
+    .logo {
+      display: block;
+      font-family: Tangerine, futuralight;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+
+      margin-top: 100px;
+      width: 100%;
+      max-width: 700px;
+      font-weight: 300;
+      color: white;
+
+    }
+
+    .about-page {
+      opacity: 0;
+      margin-top: 0;
+      background-image: url("images/space-background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-top: 50px;
+      padding-bottom: 80px;
+
+      animation-name: start;
+      animation-duration: 1s;
+      animation-delay: 0.85s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+  
+      --base-margin: 0px;
+      --extra-margin: 30px;
+    }
+
+    .about-page-title {
+      opacity: 1;
+      font-family: futuralight, sans-serif, Arial;
+      margin-top: 0;
+      text-align: center;
+      color: white;
+      font-weight: 50;
+      font-size: 38px;
+      margin: auto;
+    }
+
+    .about-line {
+      font-family: futuralight, sans-serif, Arial;
+      font-size: 30px;
+      text-align: center;
+      margin: auto;
+      color: white;
+    }
+
+    .about-name {
+      color: white;
+      font-family: futuralight, sans-serif, Arial;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .about-desc {
+      font-family: futuralight, sans-serif, Arial;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+
+      padding-left: 5px;
+      padding-right: 5px;
+
+      margin-top: 10px;
+      line-height: 35px;
+    }
+
+    .about-desc a {
+      margin-top: 5px;
+      color: rgb(126, 170, 255);
+      text-decoration: none;
+    }
+
+    .about-desc a:hover {
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
+    .contacts {
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .github {
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      transition: color 0.15s;
+    }
+
+    /*.instagram {
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      margin-left: 10px;
+
+      background-image: linear-gradient(to black, black);
+      transition: background-image 0.15s ease-in-out;
+    }*/
+
+
+
+    .linkedin {
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      margin-left: 10px;
+      transition: color 0.15s;
+    }
+
+    .github:hover {
+      color: white;
+    }
+
+    .linkedin:hover {
+      color: #0274b3;
+    }
+
+    .buy-a-website {
+      background-color: grey;
+      padding-top: 50px;
+      padding-bottom: 200px;
+
+      opacity: 0;
+
+      animation-name: start;
+      animation-duration: 1s;
+      animation-delay: 1.85s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+  
+      --base-margin: 0px;
+      --extra-margin: 30px;
+    }
+
+    .buy-title {
+      margin-top: 0;
+      font-family: futuralight, sans-serif, Arial;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 50px;
+      margin-bottom: 0;
+    }
+
+    .buy-disclamer {
+      font-family: futuralight, sans-serif, Arial;
+      text-align: center;
+      font-size: 17px;
+      margin-top: 0;
+    }
+    .buy-button-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*.buy-button {
+      margin-top: 0;
+      background-color: rgb(0 166 255);
+      border: none;
+      border-radius: 15px;
+
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      
+      transition: background-color 0.15s;
+      cursor: pointer;
+    }
+
+    .buy-button:hover {
+      background-color: rgb(0, 112, 172);
+    }
+
+    .buy-button:active {
+      background-color: black;
+      color: rgb(0, 112, 172);
+      border: solid;
+      border-color: rgb(0, 112, 172);
+    }*/
+
+    .buy-button{
+      position: relative;
+      background-color: rgb(0, 166, 255);
+      border: none;
+      border-radius: 4em;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      padding: 0.8em 1.8em;
+      cursor: pointer;
+      user-select:none;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition-duration: 0.4s;
+      -webkit-transition-duration: 0.4s;
+
+      margin-top: 10px;
+    }
+
+      .buy-button:hover {
+        transition-duration: 0.15s;
+        background-color: rgb(0, 112, 172);
+      }
+
+      .buy-button:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 4em;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.5s;
+        box-shadow: 0 0 10px 40px white;
+      }
+
+      .buy-button:active:after {
+        box-shadow: 0 0 0 0 white;
+        position: absolute;
+        border-radius: 4em;
+        left: 0;
+        top:0;
+        opacity: 1;
+        transition: 0s;
+      }
+
+      .buy-button:active {
+        top: 1px;
+        background-color: rgb(126, 170, 255);
+      }
+    
+    .mailtolink {
+      text-decoration: underline;
+      color: rgb(0 102 204);
+      cursor: pointer;
+    }
+
+    .contact-me {
+      background-color: white;
+      opacity: 0;
+      font-family: futuralight, sans-serif, Arial;
+      margin-top: 10px;
+      padding: 10px;
+      text-align: center;
+      font-size: 17.5px;
+
+      animation-name: start;
+      animation-duration: 1s;
+      animation-delay: 2.7s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+  
+      --base-margin: 0px;
+      --extra-margin: 30px;
+    }
+
+    @keyframes start {
+      0% {
+        opacity: 0;
+        margin-top: calc(var(--base-margin) + var(--extra-margin));
+      }
+
+      100% {
+        opacity: 1;
+        margin-top: 0;
+      }
+
+    }
+
+    /*@media (max-width: 334px) {
+      .buy-a-website {
+        height: 460px;
+      }
+    }*/
+
+
+  </style>
+</head>
+<body>
+
+  <script>
+    function openMailTo() {
+      var email = "lukasstardesigns@gmail.com";
+      var subject = "";
+      var body = "";
+      
+      var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      
+      window.open(mailtoLink, '_blank');
+    }
+  </script>
+
+  <header>
+      <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
+      <nav>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing-plans.html">Pricing</a></li>
+          <a href="contact.html"><button class="nav-button">Contact</button></a>
+        </ul>
+      </nav>
+
+    <div class="mobile-nav">
+      <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+      <ul class="mobile-links">
+        <img src="images/stardesignslogo.png" class="nav-logo">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing-plans.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="front-page">
+    <img src="images/stardesignslogo.png" class="logo">
+  </div>
+  <div class="about-page">
+    <h1 class="about-page-title">THE BEST WEBSITES FOR AFFORDABLE PRICES</h1>
+    <p class="about-line">---------------------</p>
+    <p class="about-name">Hello, I'm Lukas</p>
+    <p class="about-desc">
+        I had a passion for coding since I was 9. Get the best websites for your needs, just like this one.<br>
+        You can learn about me more <a href="about.html" target="_blank" rel="noopener noreferrer">Here</a>
+        <br>
+        By using these services you agree to our <a href="terms-of-service.html">Terms Of Service</a> and have read our <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+    <!--<div class="contacts">
+      <div class="github-div">
+        <a class="github" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+       <div class="instagram-div">
+        <a class="instagram" href="insta.html" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="linkedin-div">
+        <a class="linkedin" href="linkedin.html" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div> -->
+  </div>
+  <div class="buy-a-website">
+     <h1 class="buy-title">WANT A WEBSITE, GET ONE HERE.</h1>
+     <p class="buy-disclamer">(for now we only sell portfolios)</p>
+     <div class="buy-button-div">
+      <a href="pricing-plans.html">
+        <button class="buy-button">Buy Now</button>
+      </a>
+      </div>
+     </div>
+  </div>
+  <div class="contact-me">
+    <p class="contact-email">
+      Need help? Contact me here:
+      <a onclick="openMailTo()" target="_blank" class="mailtolink">lukasstardesigns@gmail.com</a>
+    </p>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="nav-bar.css">
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+  <script src="mobile-menu.js"></script>
+  <script src="picture-onclick.js"></script>
+  <link rel="icon" href="images/favicon.ico">
+  
+  <title>Email Submission Form</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+    @font-face {
+        font-family: futuralight;
+        src: url(fonts/futuralight.ttf);
+    }
+
+    body, html {
+      display: flex;
+      background-color: grey;
+
+      justify-content: center;
+    }
+
+    .form {
+      color: white;
+      font-family: futuralight, Arial;
+      margin-top: 95px;
+      width: 75%;
+      background-image: url("images/space-background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-bottom: 300px;
+    }
+
+    hr {
+      position: relative;
+      top: 20px;
+    }
+
+    .form h1 {
+      text-align: center;
+      margin: 0;
+    }
+
+    #emailForm {
+       text-align: center;
+       align-items: center;
+       margin-top: 15px;
+    }
+
+    .submit-button {
+      color: black;
+      padding: 9px 25px;
+      background-color: rgb(0, 166, 255);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      margin-top: 5px;
+    }
+
+    .submit-button:hover {
+      background-color: rgb(0, 112, 172);
+    }
+
+
+    .submit-button:active {
+      background-color: rgb(126, 170, 255);
+    }
+
+    .email {
+      width: 18vh;
+      text-align: center;
+    }
+
+    .form p {
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    #message {
+      text-align: center;
+    }
+
+    .advanced-email {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .advanced-email a {
+      color: rgb(126, 208, 255);
+      text-decoration: none;
+    }
+
+    .advanced-email a:hover {
+      text-decoration: underline;
+    }
+
+    .form h1 {
+      margin-top: 30px;
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .pro-website-example {
+      background-color: white;
+      margin: auto;
+      width: 208.5px;
+      margin-top: 15px;
+    }
+
+    .pro-website-example img{
+      display: block;
+      width: 208.5px;
+      margin: auto;
+      transition: opacity 0.5s;
+    }
+
+    .pro-website-example img:hover {
+      opacity: 0.5;
+    }
+
+    .logo {
+      display: block;
+      margin: auto;
+      width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <a href="contact.html"><button class="nav-button">Contact</button></a>
+      </ul>
+    </nav>
+
+  <div class="mobile-nav">
+    <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+    <ul class="mobile-links">
+      <img src="images/stardesignslogo.png" class="nav-logo">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+  <div class="form">
+
+    <h1>Request to buy a website from stardesigns:</h1>
+
+    <form id="emailForm">
+      <label for="email">Enter your email address:</label>
+      <br>
+      <input type="email" id="email" name="email" required placeholder="Your email address" class="email">
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+
+    <p>Disclamer: By clicking "Submit" you are using a google service to send you an email.
+      If the domain of your email isnt @gmail.com it might take more than 1 attempt to send you an email.
+    </p>
+
+    <a href="redeem.html" style="color: aqua; text-align: center; margin: auto; text-decoration: underline; display: block;">Redeem A Gift Card Here</a>
+
+    <hr style="width: 75%; margin: auto;">
+    
+    <div class="why">
+      <h1>Why you cant immediately buy a website?</h1>
+      <p>I am not doing this full time, so I have other work to do. I dont want you to buy a website and I'm not available, because then you basically waste your money for a good chunk of time. The main thing is that I am pretty busy most of the time and I dont want to scam you.</p>
+    </div>
+
+    <div id="message">
+    </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting the usual way
+
+    var email = document.getElementById("email").value; // Get the email value from the input field
+    var messageDiv = document.getElementById("message");
+
+    // Make sure the email field is not empty
+    if (!email) {
+      messageDiv.textContent = "Please enter a valid email address.";
+      messageDiv.style.color = "red";
+      return;
+    }
+
+    var url = "https://script.google.com/macros/s/AKfycbyHRPvRigwNuw4Bu3tF9RmxFo-hXAFpsFHDDVmaf9ggcDRSvG65I0e02sS4wop66AgzWg/exec"; // Replace with your Google Apps Script Web App URL
+
+    // Send the data using fetch (POST request)
+    fetch(url, {
+      method: 'POST',
+      body: new URLSearchParams({
+        'email': email // Send the email value as a parameter
+      })
+    })
+    .then(response => response.text()) // Handle the response (confirmation)
+    .then(data => {
+      console.log("Response from Apps Script:", data);
+      if (data.includes("success")) {
+        messageDiv.textContent = "Thank you! A confirmation email has been sent to your inbox. If you do not recieve an email within 3-5 minutes, please check your spam folder. If you still do not see an email, please contact me in the contact page";
+
+        messageDiv.style.color = "green";
+        document.getElementById("email").value = ''; // Clear the email input field
+      } else {
+        messageDiv.textContent = "There was an error submitting the form. Please try again. If this is still not working after multiple attempts, contact me in the contact page";
+        messageDiv.style.color = "red";
+      }
+    })
+    .catch(error => {
+      console.error("Error submitting the form:", error);
+      messageDiv.textContent = "There was an error submitting the form. Please try again. If this is still not working after multiple attempts, contact me in the contact page";
+      messageDiv.style.color = "red";
+    });
+  });
+  </script>
+</body>
+</html>

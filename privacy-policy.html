@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>stardesigns - Terms Of Service</title>
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+  <script src="mobile-menu.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/StarDesigns_icon.png">
+  <script src="picture-onclick.js"></script>
+  <script src=""></script>
+  <link rel="stylesheet" href="nav-bar.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 0 20px;
+      color: #333;
+    }
+    .privacy-policy {
+      padding-top: 50px;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    h1 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    ul li {
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+    .weblink {
+      text-decoration: underline;
+      color: rgb(0 102 204);
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+    .email {
+      text-decoration: underline;
+      color: rgb(0, 0, 0);
+      font-family: Arial, sans-serif;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <script>
+    function openMailTo() {
+      var email = "lukasstardesigns@gmail.com";
+      var subject = "";
+      var body = "";
+      
+      var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      
+      window.open(mailtoLink, '_blank');
+    }
+  </script>
+  
+
+  <header>
+    <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <a href="contact.html"><button class="nav-button">Contact</button></a>
+      </ul>
+    </nav>
+
+  <div class="mobile-nav">
+    <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+    <ul class="mobile-links">
+      <img src="images/stardesignslogo.png" class="nav-logo">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </header>
+
+  <div class="privacy-policy">
+
+
+    <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> April 18, 2025</p>
+  
+    <p>Welcome to StarDesigns! We care about your privacy and want to be clear about how we collect and use your information.</p>
+  
+    <h2>1. What Information We Collect</h2>
+    <p>We collect personal information only when you choose to share it with us—for example, when you email us to request a website. This may include:</p>
+    <ul>
+      <li>Your name</li>
+      <li>Contact information (like email)</li>
+      <li>Business details for your website (text, images, branding, etc.)</li>
+    </ul>
+  
+    <h2>2. How We Use Your Information</h2>
+    <p>We use your information only to build and deliver the website you’ve requested. We do not store your data on private servers.</p>
+    <p>However, information you send via email (including website content and contact details) may be stored in our Gmail inbox, hosted by Google. This helps us reference your project and communicate effectively.</p>
+    <p>We may keep your email address to contact you about your project or notify you of important updates, such as policy changes.</p>
+    <p><strong>We do not share or sell your information</strong> to anyone—except to our employees who need it to complete your project.</p>
+  
+    <h2>3. Payments</h2>
+    <p>We may use third-party platforms like Venmo to collect payments. Any payment details you provide through Venmo are subject to Venmo’s privacy policy and security. We do not collect or store your payment information ourselves.</p>
+  
+    <h2>4. Cookies and Tracking</h2>
+    <p>We do not currently use cookies, tracking, or analytics tools on our website.</p>
+  
+    <h2>5. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy occasionally. If we do, we’ll update the “Last Updated” date at the top of this page.</p>
+    <p>We will also email you if there are any significant changes to this policy.</p>
+  
+    <h2>6. Contact Us</h2>
+    <div class="contact">
+      <p>If you have any questions about this Privacy Policy or how we handle your information, contact us at:</p>
+      <p>Email: <a href="mailto:lukasstardesigns@gmail.com" class="email">lukasstardesigns@gmail.com</a><br>
+      Website: <a href="https://www.stardesignsstudio.com" target="_blank" class="weblink">www.stardesignsstudio.com</a></p>
+    </div>
+  </div>
+</body>
+</html>

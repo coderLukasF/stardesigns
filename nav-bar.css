@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gidole&display=swap');
+
+@font-face {
+  font-family: futuralight;
+  src: url(fonts/futuralight.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li, a, button {
+  font-family: futuralight, sans-serif, Arial;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 10%;
+  width: 100%;
+  background-color: #949494;
+  
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+}
+
+.nav-logo {
+  width: 210px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #d1d1d1;
+}
+
+.nav-button {
+  padding: 9px 25px;
+  background-color: rgb(0, 166, 255);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-button:hover {
+  background-color: rgb(0, 112, 172);
+}
+
+
+.nav-button:active {
+  background-color: rgb(126, 170, 255);
+}
+
+
+@media only screen and (max-width: 710px) {
+  nav {
+    display: none;
+  }
+
+  .mobile-links {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 711px) {
+  .mobile-nav {
+    display: none;
+  }
+
+}
+
+.fa-bars {
+  color: white;
+  cursor: pointer;
+}
+
+
+.mobile-links.toggleMobileNavBar {
+  display: block;
+  position: absolute;
+  background-color: rgb(31, 31, 31);
+  width: 225px;
+  text-align: center;
+  list-style: none;
+  right: 0;
+  top: 81px;
+  height: 100vh;
+  
+  animation-name: mobile-nav-open;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.mobile-links a {
+  position: static;
+  color: white;
+
+  transition: all 0.15s;
+}
+
+@keyframes mobile-nav-open {
+  0% {
+    opacity: 0;
+    right: 50%;
+  }
+
+  100% {
+    opacity: 1;
+    right: 0;
+    
+  }
+}
