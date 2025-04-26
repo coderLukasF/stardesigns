@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Not Found</title>
+  <title>stardesigns - Page Not Found</title>
+  
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+  <script src="mobile-menu.js"></script>
+  <script src="picture-onclick.js"></script>
+  <link rel="stylesheet" href="nav-bar.css">
+  <link rel="icon" type="image/x-icon" href="/images/StarDesigns_icon.png">
   <style>
+
+    @font-face {
+      font-family: futuralight;
+      src: url(fonts/futuralight.ttf);
+    }
+
     body {
-      background-color: #f8f9fa;
+      background-image: url("images/space-background.jpg");
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center;
       color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
@@ -21,15 +36,18 @@
     h1 {
       font-size: 8rem;
       margin: 0;
-      color: #007BFF;
+      color: #72b6ff;
+      font-family: futuralight;
+      font-weight: bold;
     }
 
     p {
       font-size: 1.5rem;
       margin: 20px 0;
+      color: rgb(204, 204, 204);
     }
 
-    a button {
+    .b2h button {
       padding: 10px 20px;
       font-size: 1rem;
       border: none;
@@ -40,16 +58,58 @@
       transition: background-color 0.3s ease;
     }
 
-    a button:hover {
+    .b2h button:hover {
       background-color: #0056b3;
+    }
+
+    .b2h button:active{
+      background-color: #54a6ff;
+    }
+
+    .contact {
+      font-size: 17px;
+    }
+
+    .contact a {
+      color: rgb(126, 208, 255);
+      text-decoration: none;
+    }
+
+    .contact a:hover{
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <a href="contact.html"><button class="nav-button">Contact</button></a>
+      </ul>
+    </nav>
+
+  <div class="mobile-nav">
+    <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+    <ul class="mobile-links">
+      <img src="images/stardesignslogo.png" class="nav-logo">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
   <h1>404</h1>
   <p>Oops! The page you're looking for doesn't exist.</p>
-  <a href="/">
+  <a href="/" class="b2h">
     <button>Back to Home</button>
   </a>
+  <p class="contact">If you spelled the URL correctly or clicked a link on the website, <strong>please</strong> contact me about the error at <a href="mailto:lukasstardesigns@gmail.com">lukasstardesigns@gmail.com</a></p>
 </body>
 </html>
