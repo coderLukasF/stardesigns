@@ -1,3 +1,3 @@
 function pictureonclick() {
-  window.location.href='./';
+  window.location.href='/';
 }
