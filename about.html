@@ -55,7 +55,7 @@
       --extra-margin: 35px;
     }
 
-    .about-page-title {
+    .about-page h1 {
       opacity: 1;
       font-family: futuralight, sans-serif, Arial;
       margin-top: 0;
@@ -66,28 +66,33 @@
       padding-left: 5px;
       padding-right: 5px;
       margin: auto;
+      margin-bottom: 20px;
     }
 
-    .about-line {
-      font-family: futuralight, sans-serif, Arial;
-      font-size: 30px;
-      text-align: center;
+    .about-page hr {
+      width: 6.5%;
       margin: auto;
-      color: white;
+      background-color: white;
+
+      height: 1px;
+      border: none;
     }
 
-    .about-name {
+    .about-page h2 {
+      margin-top: 15px;
       color: white;
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       font-size: 30px;
+      font-weight: 50;
     }
 
-    .about-desc {
+    .about-page p {
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       color: white;
       font-size: 18px;
+      font-weight: 0;
 
       padding-left: 5px;
       padding-right: 5px;
@@ -95,11 +100,12 @@
       margin-top: 10px;
     }
 
-    .about-desc-fact {
+    .about-page h3 {
       color: white;
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       font-size: 22px;
+      font-weight: 50;
       
       padding-left: 5px;
       padding-right: 5px;
@@ -107,21 +113,9 @@
       margin-top: 25px;
     }
 
-    .about-link {
-      margin-top: 5px;
-      color: rgb(126, 170, 255);
-      text-decoration: none;
-    }
-
-    .about-link:hover {
-      text-decoration: underline;
-      margin-top: 5px;
-    }
-
-
     .fun-facts {
       background-color: rgb(255, 254, 187);
-      padding-top: 50px;
+      padding-top: 20px;
       padding-bottom: 35px;
 
       opacity: 0;
@@ -136,7 +130,7 @@
       --extra-margin: 30px;
     }
 
-    .fun-facts-title {
+    .fun-facts h1 {
       margin-top: 0;
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
@@ -145,18 +139,23 @@
       margin-bottom: 0;
     }
 
-    .fun-facts-subtitle {
+    .fun-facts h2 {
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       font-size: 17px;
       margin-top: 0;
-      margin-bottom: 10px;
+      font-weight: 50;
     }
 
-    .fun-facts-line {
-      font-family: futuralight, sans-serif, Arial;
-      text-align: center;
-      font-size: 17px;
+    .fun-facts hr {
+      width: 3.5%;
+      margin: auto;
+      background-color: rgb(0, 0, 0);
+
+      height: 1px;
+      border: none;
+      margin-top: 22.5px;
+      margin-bottom: 10px;
     }
 
     .fun-fact {
@@ -164,15 +163,6 @@
       text-align: center;
       margin: 5px;
       margin-bottom: 15px;
-    }
-
-    .youtube-link {
-      color: rgb(0, 102, 204);
-      cursor: pointer;
-    }
-
-    .youtube-link:hover {
-      text-decoration: underline;
     }
 
     .two-truths-and-a-lie {
@@ -192,37 +182,42 @@
       --extra-margin: 30px;
     }
 
-    .two-truths-and-a-lie-title {
+    .two-truths-and-a-lie h1 {
       font-family: futuralight, sans-serif, Arial;
       font-weight: 50;
       text-align: center;
       font-size: 50px;
     }
 
-    .two-truths-and-a-lie-line {
-      font-family: futuralight, sans-serif, Arial;
-      text-align: center;
-      font-size: 17px;
+    .two-truths-and-a-lie hr{
+      width: 3.5%;
+      margin: auto;
+      background-color: rgb(0, 0, 0);
+
+      height: 1px;
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
-    .two-truths-and-a-lie-column1 {
+    .two-truths-and-a-lie-div {
       text-align: center;
     }
 
-    .two-truths-and-a-lie-p1{
+    .two-truths-and-a-lie p{
       font-family: futuralight, sans-serif, Arial;
       font-size: 18px;
       display: inline-block;
     }
 
-    #two-truths-and-a-lie-lie1 {
+    #two-truths-and-a-lie-lie {
       font-family: sans-serif, Arial;
       color: rgb(255, 100, 100);
       font-weight: 700;
       display: none;
     }
 
-    #two-truths-and-a-lie-button1{
+    .two-truths-and-a-lie button{
       font-family: futuralight, sans-serif, Arial;
       color: black;
       border: none;
@@ -238,175 +233,16 @@
       transition: background-color 0.15s;
     }
 
-    #two-truths-and-a-lie-button1:hover {
+    .two-truths-and-a-lie button:hover {
       background-color: rgb(255, 97, 97);
     }
 
-    #two-truths-and-a-lie-button1:active {
+    .two-truths-and-a-lie button:active {
       background-color: rgb(255, 196, 196);
     }
 
-    #two-truths-and-a-lie-button1.reveal {
+    .two-truths-and-a-lie button.reveal {
       display: none;
-      
-    }
-
-    #two-truths-and-a-lie-lie1.reveal {
-      display: inline-block;
-      
-    }
-
-    .two-truths-and-a-lie-column2 {
-      text-align: center;
-    }
-
-    .two-truths-and-a-lie-p2{
-      font-family: futuralight, sans-serif, Arial;
-      font-size: 18px;
-      display: inline-block;
-    }
-
-    #two-truths-and-a-lie-lie2 {
-      font-family: sans-serif, Arial;
-      color: rgb(255, 100, 100);
-      font-weight: 700;
-      display: none;
-    }
-
-    #two-truths-and-a-lie-button2{
-      font-family: futuralight, sans-serif, Arial;
-      color: black;
-      border: none;
-      background-color: rgb(255, 124, 124);
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 7.5px;
-      padding-bottom: 7.5px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-
-      cursor: pointer;
-      transition: background-color 0.15s;
-    }
-
-    #two-truths-and-a-lie-button2:hover {
-      background-color: rgb(255, 97, 97);
-    }
-
-    #two-truths-and-a-lie-button2:active {
-      background-color: rgb(255, 196, 196);
-    }
-
-    #two-truths-and-a-lie-button2.reveal {
-      display: none;
-      
-    }
-
-    #two-truths-and-a-lie-lie2.reveal {
-      display: inline-block;
-      
-    }
-
-    .two-truths-and-a-lie-column3 {
-      text-align: center;
-    }
-
-    .two-truths-and-a-lie-p3{
-      font-family: futuralight, sans-serif, Arial;
-      font-size: 18px;
-      display: inline-block;
-    }
-
-    #two-truths-and-a-lie-lie3 {
-      font-family: sans-serif, Arial;
-      color: rgb(255, 100, 100);
-      font-weight: 700;
-      display: none;
-    }
-
-    #two-truths-and-a-lie-button3{
-      font-family: futuralight, sans-serif, Arial;
-      color: black;
-      border: none;
-      background-color: rgb(255, 124, 124);
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 7.5px;
-      padding-bottom: 7.5px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-
-      cursor: pointer;
-      transition: background-color 0.15s;
-    }
-
-    #two-truths-and-a-lie-button3:hover {
-      background-color: rgb(255, 97, 97);
-    }
-
-    #two-truths-and-a-lie-button3:active {
-      background-color: rgb(255, 196, 196);
-    }
-
-    #two-truths-and-a-lie-button3.reveal {
-      display: none;
-      
-    }
-
-    #two-truths-and-a-lie-lie3.reveal {
-      display: inline-block;
-      
-    }
-
-    .two-truths-and-a-lie-column4 {
-      text-align: center;
-    }
-
-    .two-truths-and-a-lie-p4{
-      font-family: futuralight, sans-serif, Arial;
-      font-size: 18px;
-      display: inline-block;
-    }
-
-    #two-truths-and-a-lie-lie4 {
-      font-family: sans-serif, Arial;
-      color: rgb(255, 100, 100);
-      font-weight: 700;
-      display: none;
-    }
-
-    #two-truths-and-a-lie-button4{
-      font-family: futuralight, sans-serif, Arial;
-      color: black;
-      border: none;
-      background-color: rgb(255, 124, 124);
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 7.5px;
-      padding-bottom: 7.5px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-
-      cursor: pointer;
-      transition: background-color 0.15s;
-    }
-
-    #two-truths-and-a-lie-button4:hover {
-      background-color: rgb(255, 97, 97);
-    }
-
-    #two-truths-and-a-lie-button4:active {
-      background-color: rgb(255, 196, 196);
-    }
-
-    #two-truths-and-a-lie-button4.reveal {
-      display: none;
-      
-    }
-
-    #two-truths-and-a-lie-lie4.reveal {
-      display: inline-block;
-      
     }
     
 
@@ -422,68 +258,6 @@
       }
 
     }
-
-    /*@media (max-width: 413px) {
-      .two-truths-and-a-lie {
-        height: 460px;
-      }
-    }
-
-    
-    @media (max-width: 407px) {
-      .fun-facts {
-        height: 460px;
-      }
-    }
-
-    @media (max-width: 273px) {
-      .fun-facts {
-        height: 560px;
-      }
-    }
-
-    @media (max-width: 332px) {
-      .fun-facts {
-        height: 610px;
-      }
-    }
-
-    @media (max-width: 874px) {
-      .about-page {
-        height: 530px;
-      }
-    }
-
-    @media (max-width: 761px) {
-      .about-page {
-        height: 530px;
-      }
-    }
-
-    @media (max-width: 414px) {
-      .about-page {
-        height: 600px;
-      }
-    }
-
-    @media (max-width: 350px) {
-      .about-page {
-        height: 670px;
-      }
-    }
-
-    @media (max-width: 311px) {
-      .about-page {
-        height: 730px;
-      }
-    }
-
-    @media (max-width: 259px) {
-      .about-page {
-        height: 810px;
-      }
-    }*/
-
   </style>
 </head>
 <body>
@@ -491,34 +265,37 @@
   <script>
     function reveal(button) {
     if (button) {
-        const paragraph = button.previousElementSibling;
-        if (paragraph) {
-            paragraph.classList.toggle('reveal');
-            button.classList.toggle('reveal');
-        }
+    const parent = button.closest(".two-truths-and-a-lie-div");
+    if (parent) {
+      const lie = parent.querySelector("#two-truths-and-a-lie-lie");
+      if (lie) {
+        lie.style.display = "inline-block";
+        button.style.display = "none";
+      }
     }
-}
+  }
+  }
   </script>
 
 <div id="navbar"></div>
 <script src="/nav-bar.js"></script>
 
   <div class="about-page">
-    <h1 class="about-page-title">THE BEST WEBSITES FOR AFFORDABLE PRICES</h1>
-    <p class="about-line">---------------------</p>
-    <p class="about-name">Hello, I'm Lukas</p>
-    <p class="about-desc">
+    <h1>THE BEST WEBSITES FOR AFFORDABLE PRICES</h1>
+    <hr>
+    <h2>Hello, I'm Lukas</h2>
+    <p>
         I had a passion for coding since I was 9. I know HTML, CSS, Premiere Pro, Roblox Studio, and a little bit of python.
         <br> 
         I am a self-taught learner and have never taken a coding class before, I think the internet is better for learning faster.
     </p>
 
-    <p class="about-desc-fact">I made the website you are viewing right now in only a week!</p>
+    <h3>I made the website you are viewing right now in only a week!</h3>
   </div>
   <div class="fun-facts">
-     <h1 class="fun-facts-title">FUN FACTS ABOUT ME!</h1>
-     <p class="fun-facts-subtitle">Get to know some fun things about me!</p>
-     <p class="fun-facts-line">---------------------</p>
+     <h1>FUN FACTS ABOUT ME!</h1>
+     <h2>Get to know some fun things about me!</h2>
+     <hr>
      <p class="fun-fact">
       1. I can work in the coding, graphic design, and video editing industry.
     </p>
@@ -535,32 +312,20 @@
   </div>
 
   <div class="two-truths-and-a-lie">
-    <h1 class="two-truths-and-a-lie-title">LETS PLAY TWO TRUTHS AND A LIE!</h1>
-    <p class="two-truths-and-a-lie-line">---------------------</p>
+    <h1>LETS PLAY TWO TRUTHS AND A LIE!</h1>
+    <hr>
 
-    <div class="two-truths-and-a-lie-column1">
-      <p class="two-truths-and-a-lie-p1">I can list 50 digits of pi, I put together a PC before, I have published a game before</p>
-      <p id="two-truths-and-a-lie-lie1">I put together a PC before</p>
-      <button id="two-truths-and-a-lie-button1" onclick="reveal(this)">Reveal Lie</button>
+    <div class="two-truths-and-a-lie-div">
+      <p>I can list 50 digits of pi, I put together a PC before, I have published a game before</p>
+      <p id="two-truths-and-a-lie-lie">I put together a PC before</p>
+      <button onclick="reveal(this)">Reveal Lie</button>
   </div>
   
-  <div class="two-truths-and-a-lie-column2">
-      <p class="two-truths-and-a-lie-p2">I learned to ride a bike WITHOUT training wheels at three, I have made an ad for Nike, and I have lived in 4 states.</p>
-      <p id="two-truths-and-a-lie-lie2">I have made an ad for Nike</p>
-      <button id="two-truths-and-a-lie-button2" onclick="reveal(this)">Reveal Lie</button>
+  <div class="two-truths-and-a-lie-div">
+      <p>I learned to ride a bike WITHOUT training wheels at three, I have made an ad for Nike, and I have lived in 4 states.</p>
+      <p id="two-truths-and-a-lie-lie">I have made an ad for Nike</p>
+      <button onclick="reveal(this)">Reveal Lie</button>
   </div>
-  
-  <!--<div class="two-truths-and-a-lie-column3">
-      <p class="two-truths-and-a-lie-p3">True, True, Lie</p>
-      <p id="two-truths-and-a-lie-lie3">Lie</p>
-      <button id="two-truths-and-a-lie-button3" onclick="reveal(this)">Reveal Lie</button>
-  </div>
-
-  <div class="two-truths-and-a-lie-column4">
-    <p class="two-truths-and-a-lie-p4">True, True, Lie</p>
-    <p id="two-truths-and-a-lie-lie4">Lie</p>
-    <button id="two-truths-and-a-lie-button4" onclick="reveal(this)">Reveal Lie</button>
-</div>-->
 
 
   </div>
