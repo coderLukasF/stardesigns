@@ -87,7 +87,7 @@
       --extra-margin: 30px;
     }
 
-    .about-page-title {
+    .about-page h1 {
       opacity: 1;
       font-family: futuralight, sans-serif, Arial;
       margin-top: 0;
@@ -95,25 +95,28 @@
       color: white;
       font-weight: 50;
       font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about-page hr {
+      width: 6.5%;
       margin: auto;
+      background-color: white;
+
+      height: 1px;
+      border: none;
     }
 
-    .about-line {
-      font-family: futuralight, sans-serif, Arial;
-      font-size: 30px;
-      text-align: center;
-      margin: auto;
-      color: white;
-    }
-
-    .about-name {
+    .about-page h2 {
+      margin-top: 15px;
       color: white;
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       font-size: 30px;
+      font-weight: 50;
     }
 
-    .about-desc {
+    .about-page p {
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       color: white;
@@ -126,13 +129,13 @@
       line-height: 35px;
     }
 
-    .about-desc a {
+    .about-page p a {
       margin-top: 5px;
       color: rgb(126, 170, 255);
       text-decoration: none;
     }
 
-    .about-desc a:hover {
+    .about-page p a:hover {
       text-decoration: underline;
       margin-top: 5px;
     }
@@ -141,41 +144,6 @@
       display: flex; 
       justify-content: center; 
       align-items: center;
-    }
-
-    .github {
-      color: black;
-      font-size: 50px;
-      text-align: center;
-      transition: color 0.15s;
-    }
-
-    /*.instagram {
-      color: black;
-      font-size: 50px;
-      text-align: center;
-      margin-left: 10px;
-
-      background-image: linear-gradient(to black, black);
-      transition: background-image 0.15s ease-in-out;
-    }*/
-
-
-
-    .linkedin {
-      color: black;
-      font-size: 50px;
-      text-align: center;
-      margin-left: 10px;
-      transition: color 0.15s;
-    }
-
-    .github:hover {
-      color: white;
-    }
-
-    .linkedin:hover {
-      color: #0274b3;
     }
 
     .buy-a-website {
@@ -195,7 +163,7 @@
       --extra-margin: 30px;
     }
 
-    .buy-title {
+    .buy-a-website h1 {
       margin-top: 0;
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
@@ -204,7 +172,7 @@
       margin-bottom: 0;
     }
 
-    .buy-disclamer {
+    .buy-a-website p {
       font-family: futuralight, sans-serif, Arial;
       text-align: center;
       font-size: 17px;
@@ -224,33 +192,7 @@
       align-items: center;
     }
 
-    /*.buy-button {
-      margin-top: 0;
-      background-color: rgb(0 166 255);
-      border: none;
-      border-radius: 15px;
-
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 7px;
-      padding-bottom: 7px;
-      
-      transition: background-color 0.15s;
-      cursor: pointer;
-    }
-
-    .buy-button:hover {
-      background-color: rgb(0, 112, 172);
-    }
-
-    .buy-button:active {
-      background-color: black;
-      color: rgb(0, 112, 172);
-      border: solid;
-      border-color: rgb(0, 112, 172);
-    }*/
-
-    .buy-button{
+    .buy-a-website a button{
       position: relative;
       background-color: rgb(0, 166, 255);
       border: none;
@@ -303,7 +245,7 @@
         background-color: rgb(126, 170, 255);
       }
     
-    .mailtolink {
+    .contact-me a {
       text-decoration: underline;
       color: rgb(0 102 204);
       cursor: pointer;
@@ -363,31 +305,7 @@
       window.open(mailtoLink, '_blank');
     }
   </script>
-
-  
-<!--<header>
-  <img src="images/stardesignslogo.png" class="nav-logo" onclick="pictureonclick()">
-  <nav>
-    <ul class="nav__links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pricing-plans.html">Pricing</a></li>
-      <a href="contact.html"><button class="nav-button">Contact</button></a>
-    </ul>
-  </nav>
-
-<div class="mobile-nav">
-  <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
-  <ul class="mobile-links">
-    <img src="images/stardesignslogo.png" class="nav-logo">
-    <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pricing-plans.html">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
-</header>-->
-
+</header>
   <div id="navbar"></div>
   <script src="/nav-bar.js"></script>
 
@@ -395,41 +313,31 @@
     <img src="images/stardesignslogo.png" class="logo">
   </div>
   <div class="about-page">
-    <h1 class="about-page-title">THE BEST WEBSITES FOR AFFORDABLE PRICES</h1>
-    <p class="about-line">---------------------</p>
-    <p class="about-name">Hello, I'm Lukas</p>
-    <p class="about-desc">
+    <h1>THE BEST WEBSITES FOR AFFORDABLE PRICES</h1>
+    <hr>
+    <h2>Hello, I'm Lukas</h2>
+    <p>
         I had a passion for coding since I was 9. Get the best websites for your needs, just like this one.<br>
         You can learn about me more <a href="./about" target="_blank" rel="noopener noreferrer">Here</a>
         <br>
         By using these services you agree to our <a href="./terms-of-service">Terms Of Service</a> and have read our <a href="./privacy-policy">Privacy Policy</a>
     </p>
-    <!--<div class="contacts">
-      <div class="github-div">
-        <a class="github" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-      </div>
-       <div class="instagram-div">
-        <a class="instagram" href="insta.html" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-      <div class="linkedin-div">
-        <a class="linkedin" href="linkedin.html" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      </div> -->
   </div>
   <div class="buy-a-website">
-     <h1 class="buy-title">WANT A WEBSITE, GET ONE HERE.</h1>
-     <p class="buy-disclamer">(for now we only sell portfolios)</p>
+     <h1>WANT A WEBSITE, GET ONE HERE.</h1>
+     <p>(for now we only sell portfolios)</p>
      <div class="buy-button-div">
       <a href="./pricing-plans">
-        <button class="buy-button">Buy Now</button>
+        <button>Buy Now</button>
       </a>
       </div>
       <p>Why should you choose us? We offer infinite revisions for a one time purchase, unlike website builders that are a yearly subscription</p>
      </div>
   </div>
   <div class="contact-me">
-    <p class="contact-email">
+    <p>
       Need help? Contact me here:
-      <a onclick="openMailTo()" target="_blank" class="mailtolink">lukasstardesigns@gmail.com</a>
+      <a onclick="openMailTo()" target="_blank">lukasstardesigns@gmail.com</a>
     </p>
  </div>
 
