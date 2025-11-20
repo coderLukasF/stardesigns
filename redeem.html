@@ -1,250 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="nav-bar.css">
-  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
-  <script src="mobile-menu.js"></script>
-  <script src="picture-onclick.js"></script>
-  <link rel="icon" href="images/favicon.ico">
-  
-  <title>Email Submission Form</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="nav-bar.css" />
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="mobile-menu.js"></script>
+    <script src="picture-onclick.js"></script>
+    <link rel="icon" href="images/favicon.ico" />
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+    <title>Gift Card Submission Form</title>
 
-    @font-face {
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+      @font-face {
         font-family: futuralight;
         src: url(fonts/futuralight.ttf);
-    }
-
-    body, html {
-      background-color: grey;
-
-      justify-content: center;
-    }
-
-    .form {
-      color: white;
-      font-family: futuralight, Arial;
-      top: 100px;
-      position: relative;
-      width: 75%;
-      background-image: url("images/space-background.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      padding: 20px;
-      margin: auto;
-      padding-bottom: 450px;
-    }
-
-    .form h1 {
-      text-align: center;
-      margin: 0;
-      font-size: 40px;
-      font-weight: bold;
-    }
-
-    #emailForm {
-       text-align: center;
-       align-items: center;
-    }
-
-    .submit-button {
-      color: black;
-      padding: 9px 25px;
-      background-color: rgb(0, 166, 255);
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-      margin-top: 5px;
-    }
-
-    .submit-button:hover {
-      background-color: rgb(0, 112, 172);
-    }
-
-
-    .submit-button:active {
-      background-color: rgb(126, 170, 255);
-    }
-
-    #email, #number {
-      width: 18vh;
-      text-align: center;
-      margin-bottom: 5px;
-      margin-top: 5px;
-    }
-
-    .form p {
-      margin-top: 5px;
-      text-align: center;
-    }
-
-    #message {
-      text-align: center;
-    }
-
-    .advanced-email {
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-
-    .advanced-email a {
-      color: rgb(126, 208, 255);
-      text-decoration: none;
-    }
-
-    .advanced-email a:hover {
-      text-decoration: underline;
-    }
-
-    .form h1 {
-      text-align: center;
-    }
-
-    .pro-website-example {
-      background-color: white;
-      margin: auto;
-      width: 208.5px;
-      margin-top: 15px;
-    }
-
-    .pro-website-example img{
-      display: block;
-      width: 208.5px;
-      margin: auto;
-      transition: opacity 0.5s;
-    }
-
-    .pro-website-example img:hover {
-      opacity: 0.5;
-    }
-
-    .logo {
-      display: block;
-      margin: auto;
-      width: 800px;
-    }
-
-    /*@media (max-width: 474px) {
-      .container {
-        height: 100vh;
-      }
-      .form {
-        height: 84vh;
       }
 
-      .advanced-email {
-        margin-top: 15px;
-      }
-    }
+      body,
+      html {
+        background-image: url("images/space-background.jpg");
+        background-size: cover;
+        background-position: center;
 
-    @media (max-width: 326px) {
-      .container {
-        height: 114vh;
-      }
-      .form {
-        height: 99vh;
+        justify-content: center;
       }
 
-      .advanced-email {
-        margin-top: 15px;
+      .maindiv {
+        color: white;
+        font-family: futuralight, Arial;
+        top: 100px;
+        position: relative;
+        width: 75%;
+
+        padding: 20px;
+        margin: auto;
       }
+
+      h1 {
+        margin: 0;
+        font-size: 350%;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: xx-large;
+      }
+
+      p {
+        margin-top: 5px;
+      }
+
+      #example {
+        background-color: beige;
+        color: rgb(15, 15, 15);
+        font-family: sans-serif;
+        padding: 10px;
+      }
+
       .logo {
-        width: 500px;
+        display: block;
+        margin: auto;
+        width: 800px;
       }
-    }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <script src="/nav-bar.js"></script>
+    <div class="maindiv">
+      <h1>Redeem your gift card:</h1>
+      <hr width="100%" style="margin: 0" />
+      <h2>
+        To redeem your gift card, email me with your email address, and gift
+        card number! This is an example.
+      </h2>
+      <h3>My email is lukasstardesigns@gmail.com</h3>
+      <p id="example">
+        Hey stardesigns! I want to redeem a giftcard, it is 123abc. My email is
+        johndoe@gmail.com <br />Thanks!
+      </p>
 
-    @media (max-width: 277px) {
-      .container {
-        height: 145vh;
-      }
-      .form {
-        height: 130vh;
-      }
+      <p>
+        Disclamer: If you redeem a gift card, it is also telling me that you are
+        buying a website.
+      </p>
 
-      .advanced-email {
-        margin-top: 15px;
-      }
-    }*/
-
-  </style>
-</head>
-<body>
-  <div id="navbar"></div>
-  <script src="/nav-bar.js"></script>
-
-  <div class="form">
-
-    <h1>Redeem your gift card:</h1>
-
-    <form id="emailForm">
-      <label for="email">Enter your email address and card number:</label>
-      <br>
-      <input type="email" id="email" required placeholder="Your Email" class="email">
-      <br>
-      <input type="text" id="number" required placeholder="You Gift Card Number">
-      <br>
-      <button type="submit" class="submit-button">Submit</button>
-    </form>
-
-    <p>Disclamer: To use your free website, you must request to buy a website through pricing plans. Once I am in contact with you, I will see that you have redeemed a gift card and not charge payment.
-    </p>
-
-    <div id="message">
+      <div id="message"></div>
     </div>
-    </div>
-  </div>
-
-<script>
-      document.getElementById("emailForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting the usual way
-
-    var email = document.getElementById("email").value; // Get the email value from the input field
-    var number = document.getElementById("number").value;
-    var messageDiv = document.getElementById("message");
-
-    // Make sure the email field is not empty
-    if (!email) {
-      messageDiv.textContent = "Please enter a valid email address.";
-      messageDiv.style.color = "red";
-      return;
-    }
-
-    var url = "https://script.google.com/macros/s/AKfycbzTK8W0Qvph7_CtsDK-lg2tu_fUYXnYdG7GoHoOov6IQtir84pHhzDUtloW86vicaHI/exec"; // Replace with your Google Apps Script Web App URL
-
-    // Send the data using fetch (POST request)
-    fetch(url, {
-      method: 'POST',
-      body: new URLSearchParams({
-        'email': email, // Send the email value as a parameter
-        'number': number
-      })
-    })
-    .then(response => response.text()) // Handle the response (confirmation)
-    .then(data => {
-      console.log("Response from Apps Script:", data);
-      if (data.includes("success")) {
-        messageDiv.textContent = "Thank you! A confirmation email has been sent to your inbox. If you do not recieve an email within 3-5 minutes, please check your spam folder. If you still do not see an email, please contact me in the contact page";
-
-        messageDiv.style.color = "green";
-        document.getElementById("email").value = ''; // Clear the email input field
-      } else {
-        messageDiv.textContent = "There was an error redeeming your gift card. Please try again. If this is still not working after multiple attempts, contact me in the contact page";
-        messageDiv.style.color = "red";
-      }
-    })
-    .catch(error => {
-      console.error("Error submitting the form:", error);
-      messageDiv.textContent = "There was an error redeeming your gift card. Please try again. If this is still not working after multiple attempts, contact me in the contact page";
-      messageDiv.style.color = "red";
-    });
-  });
-</script>
-
-</body>
+  </body>
 </html>
