@@ -5,7 +5,7 @@
 ## IMPORTANT NOTICE:
 
 This repository contains proprietary code, designs, and content owned exclusively by StarDesigns.  
-Unauthorized copying, distribution, or use of any part of this repository — including source code, assets, and design elements — is strictly prohibited.
+Unauthorized copying, distribution, or use of any part of this repository, including source code, assets, and design elements, is strictly prohibited.
 
 By accessing or using this repository, you agree to respect the intellectual property rights of StarDesigns and refrain from reproducing, modifying, or sharing any material without explicit written permission.
 
